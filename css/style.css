@@ -8,6 +8,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: rgb(29, 29, 29);
 }
 
 a{text-decoration: none;}
@@ -16,6 +17,9 @@ li{list-style: none;}
 
 span{
     padding: 0px 10px;
+}
+.opacity{
+    opacity: 0.5;
 }
 
 /* fine commons  */
@@ -48,11 +52,12 @@ header{
 .logo-big{
     background-color: black;
     display: none;
+    height: 80px;
     width:20% ;
     opacity: 1;
 }
 .logo-big img{
-    padding:0 10px;
+    padding:10px 10px;
     width: 100%;
     height: 80px;
    
@@ -126,26 +131,31 @@ main{
     font-size: 25px;
     color: black;
     vertical-align: middle;   
-    background-color: gray;
+    background-color: rgb(167, 167, 167);
     margin: 0;
     padding: 5px;
     border-radius: 5px;
 }
 
+.download .artist img{
+    background-color: rgb(167, 167, 167);
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.hidden a{
+    line-height: 2.5;
+}
 .download .icone.app{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(167, 167, 167);
     padding-bottom: 10px;
 }
 
 
+
 .download .artist{
     margin-top: 10px;
-}
-
-.download .artist img{
-    background-color: gray;
-    border-radius: 50%;
-    padding: 5px;
 }
 
 .text-nav{
@@ -161,9 +171,6 @@ main{
 
 }
 
-.hidden a{
-    line-height: 2.5;
-}
 /* fine nav  */
 
 
@@ -171,7 +178,10 @@ main{
 
 /* inizio footer  */
 footer{
+    display: flex;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -179,12 +189,116 @@ footer{
     z-index: 3;
     background-color: rgb(40, 40, 40)    
 }
+.left-footer,
+.right-footer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    font-size: 15px;
+}
+
+.center-footer{
+    width: 50%;
+}
+
+.left-footer i{
+    color: rgba(167, 167, 167, 0.527);
+    padding: 0px 5px;
+}
+
+.img-footer img{
+    width: 70px;
+    height: 80px;
+    margin-top: 8px;
+    padding: 10px 5px;
+    object-fit: cover;
+}
+
+.nome-brano{
+   
+    color:#fafafa;
+    margin: 0px 10px;
+}
+
+.center-footer{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+   margin-top: 10px;
+   margin-left: 50px;
+  
+}
+.center-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  
+}
+
+.center-top i{
+    font-size: 1.0em;
+    margin:0px 3px;
+}
+
+.center-top i:nth-of-type(3){
+    font-size: 1.8em;
+    margin: 0px 10px;
+}
+
+.center-bottom{
+    width: 70%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+   }
+
+.center-bottom span{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* progress bar  */
+
+.progress_bar {
+    margin: auto;
+    min-width:80%;
+    max-width:80%;
+    height: 7px;
+    box-shadow: 0px 0px 4px rgb(92, 92, 92);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress_bar:before {
+      content: '';
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      animation: progress-anime 10s ease-out infinite;
+      background: linear-gradient(to right, rgb(198, 198, 198),rgb(198, 198, 198) 50%,rgb(92, 92, 92) 50%,rgba(92, 92, 92)100%);
+  }
+  
+  @keyframes progress-anime {
+      0% {left: -100%;}
+      75% {left: -5%;}
+      85% {left: -5%;}
+      95% {left: 0;}
+  }
+  
+
+
+
+
+  /* fine progress bar  */
+
 /* fine footer */
-
-
-
-
-
 
 
 /* fine debug  */
@@ -233,4 +347,36 @@ footer{
     .download .icone.app img{
         width: 15%;
     }
+
+    .nome-brano .opacity{
+        display: inline-block;
+    }
+
+    .progress_bar {
+        min-width:100%;}
+
+ 
 }
+
+
+@media(min-width:768px){
+    .icon-left i{
+        display: inline-block;
+    }
+
+    .img-footer img{
+        width: 100%;
+        height: 80px;
+        margin-top: 8px;
+        padding: 10px 5px;
+        object-fit: cover;
+    }
+}
+
+
+
+  
+  
+
+
+
