@@ -34,6 +34,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width:50px ;
     height:100%;
     background-color: black;
@@ -203,7 +204,7 @@ footer{
     display: flex;
     align-items: center;
     height: 100%;
-    width: 30%;
+    width: 25%;
     font-size: 15px;
 }
 .left-footer{
@@ -211,7 +212,7 @@ footer{
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    width: 12%;
+    width: 25%;
     font-size: 10px;
 }
 
@@ -258,17 +259,17 @@ footer{
 }
 
 .center-top i{
-    font-size: 1.5em;
+    font-size: 3em;
     margin:0px 10px;
 }
 
 .center-top i:nth-of-type(3){
-    font-size: 2.4em;
+    font-size: 4em;
     margin: 0px 5px;
 }
 
 .center-bottom{
-    width: 70%;
+    width: 80%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -288,8 +289,8 @@ footer{
 
 .right-footer i{
     color:#fafafa;
-    font-size: 1.5em;
-    margin:0px 10px;
+    font-size: 1em;
+    margin:0px 2px;
 }
 
 
