@@ -1,9 +1,12 @@
+
+
 /* commons  */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.1s;
+    transition:0.1s;
 }
 
 body{
@@ -11,195 +14,186 @@ body{
     background-color: rgb(29, 29, 29);
 }
 
-a{text-decoration: none;}
-
-li{list-style: none;}
-
-span{
-    padding: 0px 10px;
-}
-.opacity{
-    opacity: 0.5;
+li{
+    list-style: none;
 }
 
-/* fine commons  */
-
-.main-container{
-    width: 100%;
+a{
+    text-decoration: none;
 }
 
-
-
-/* inizio header  */
-header{
-    background-color:rgb(15, 15, 15);
-    position: fixed;
-    top: 0;
-    top: 0;
+/* inizio main */
+main{
+    background-color: rgb(29, 29, 29);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height:80px;
-    z-index: 1;
-}
-.logo-small {
-    display: block;
-    padding: 5px;
- 
+    height:calc(100vh - 90px)
+
 }
 
-.logo-big{
+.clm-snx{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:50px ;
+    height:100%;
     background-color: black;
-    display: none;
-    height: 80px;
-    width:20% ;
-    opacity: 1;
-}
-.logo-big img{
-    padding:10px 10px;
-    width: 100%;
-    height: 80px;
-   
    
 }
 
-.btn-upgrade a{
+.clm-drx{
+    width: calc(100% - 50px);
+    height: 100%;
+    background-color: rgb(29, 29, 29);
+    overflow: auto;
+}
 
-    padding: 10px 25px;
-    margin-right: 20px;
+.upgrade{
+    position: absolute;
+    top:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:calc(100% - 50px);
+    height: 90px;
+    background-color: rgb(15, 15, 15);
+    text-align: right;
+    z-index: 4;
+}
+
+.upgrade .btn a{
+    padding: 8px 30px;
+    margin-right:20px ;
     color:#fafafa ;
     font-size: 0.98em;
     font-weight:500;
     border: 1px solid #fafafa;
     border-radius: 30px;
-}
-/* fine header  */
-
-/* inizio main  */
-main{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height:100vh;
+    
 }
 
 
-
-
-
-/* inizio nav  */
 .nav{
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height:calc(100vh - 80px);
-    width: 10%;
     z-index: 2;
-    padding:10px 10px;
     color:#fafafa;
+     
  }
-.icone{
-    display: flex;
-    align-items: center;
-    opacity: 0.5;
-    
+
+.logo-lrg{
+    width:100%;
+   
 }
 
-#playlist{
-    margin-top: 10px;
-    display: none;
-    padding: 5px;
-    
+.logo-lrg img{
+    display:none;
+    width: 100%;
+    padding:10px;
 }
 
-#playlist a{
-    color:#fafafa;
- 
-}
-
-.crea-pl{
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.crea-pl i{
-    font-size: 25px;
-    color: black;
-    vertical-align: middle;   
-    background-color: rgb(167, 167, 167);
-    margin: 0;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.download .artist img{
-    background-color: rgb(167, 167, 167);
-    font-weight: 600;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-.hidden a{
-    line-height: 2.5;
-}
-.download .icone.app{
-    border-bottom: 1px solid rgb(167, 167, 167);
-    padding-bottom: 10px;
-}
-
-
-
-.download .artist{
-    margin-top: 10px;
-}
-
-.text-nav{
-    display: none;
-    padding-left: 5px;
+.logo-sml img{
+    width: 45px;
+    padding: 10px;
 }
 
 .content{
+    width: 100%;
+    height: 100%;
+    
+}
+.icone{
     display: flex;
-    width: 90%;
-    height:calc(100vh - 80px );
-    background:rgb(29, 29, 29);
-
+    align-items: center;
 }
 
-/* fine nav  */
+.icone img{
+    width:45px;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.text-nav{
+    color:#fafafa;
+}
+
+#playlist{
+    padding: 10px;
+    line-height: 1.8;
+}
+
+#playlist i{
+    background-color: gray;
+    margin-right: 5px;
+    color: black;
+    padding:3px;
+    border-radius: 3px;
+}
+
+#playlist a{
+    color: white;
+}
+
+#playlist, .text-nav{
+    display: none;
+}
+
+.download .icone.app{
+    border-bottom: 1px solid rgb(167, 167, 167);
+    padding-bottom: 5px;
+}
 
 
-/* fine main */
 
-/* inizio footer  */
+.icon-artist{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.artist .icon-artist img{
+    display: inline-block;
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+
+.artist img{
+    padding:5px;
+   
+    border-radius: 50%;;
+    background-color:rgb(167, 167, 167) ;
+}
+
+
+
 footer{
     display: flex;
-    position: fixed;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    z-index: 3;
+    height: 90px;
+    z-index: 2;
     background-color: rgb(40, 40, 40)    
 }
-.left-footer,
 .right-footer{
     display: flex;
     align-items: center;
     height: 100%;
-    width: 25%;
+    width: 30%;
     font-size: 15px;
 }
-
-.center-footer{
-    width: 50%;
+.left-footer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 12%;
+    font-size: 15px;
 }
 
 .left-footer i{
@@ -228,27 +222,28 @@ footer{
     align-items: center;
     flex-direction: column;
     color: white;
-   margin-top: 10px;
-   margin-left: 50px;
+    margin-top: 10px;
+    
   
 }
 .center-top{
     width: 100%;
+    margin:auto;
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 40px;
   
 }
 
 .center-top i{
-    font-size: 1.0em;
-    margin:0px 3px;
+    font-size: 1.5em;
+    margin:0px 10px;
 }
 
 .center-top i:nth-of-type(3){
-    font-size: 1.8em;
-    margin: 0px 10px;
+    font-size: 2.4em;
+    margin: 0px 5px;
 }
 
 .center-bottom{
@@ -262,14 +257,29 @@ footer{
 .center-bottom span{
     font-size: 10px;
     font-weight: 600;
+    margin: 0px 5px;
+}
+.right-footer
+{
+    display: flex;
+    justify-content: flex-start;
 }
 
+.right-footer i{
+    color:#fafafa;
+    font-size: 1.5em;
+    margin:0px 10px;
+}
+
+
+.progress_bar2{
+    width:50%;
+}
 /* progress bar  */
 
 .progress_bar {
     margin: auto;
-    min-width:80%;
-    max-width:80%;
+    width:100%;
     height: 7px;
     box-shadow: 0px 0px 4px rgb(92, 92, 92);
     border-radius: 20px;
@@ -291,92 +301,58 @@ footer{
       85% {left: -5%;}
       95% {left: 0;}
   }
+  .progress_bar2 {
+    height: 5px;
+    box-shadow: 0px 0px 4px rgb(92, 92, 92);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress_bar2:before {
+      content: '';
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      animation: progress-anime 10s ease-out infinite;
+      background: linear-gradient(to right, rgb(198, 198, 198),rgb(198, 198, 198) 50%,rgb(92, 92, 92) 50%,rgba(92, 92, 92)100%);
+  }
   
+  @keyframes progress-anime {
+      0% {left: -100%;}
+      75% {left: -5%;}
+      85% {left: -5%;}
+      95% {left: 0;}
+  }
 
 
-
-
-  /* fine progress bar  */
-
-/* fine footer */
-
-
-/* fine debug  */
-
-/* inizio mededia query  */
 @media(min-width:577px){
-    .logo-big{
-        display: block;
-        width: 30%;
-    
+    .clm-snx{
+        width: 210px;
     }
 
-    .nav{
-        z-index: 1;
-        margin-top:80px;
-        width: 30%;
-        height:calc(100vh - 160px);
-    }
-    .nav .icone img{
-        width: 2em;
-        object-fit: cover;
+    .clm-drx{
+        width: calc(100% - 210px);
     }
 
-    .text-nav{
+    .logo-lrg img{
         display: block;
     }
 
-    .content{
-        width: 70%;
-        margin: 0;
-    }
-
-    header{
-        z-index: 4;
-        justify-content: space-between;
-    }
-
-    .logo-small{
+    .logo-sml{
         display: none;
     }
 
-    #playlist{
-        display: block;
+    #playlist, .text-nav{
+        display:block
     }
 
-    .download .icone.app img{
-        width: 15%;
-    }
-
-    .nome-brano .opacity{
-        display: inline-block;
-    }
-
-    .progress_bar {
-        min-width:100%;}
-
- 
-}
-
-
-@media(min-width:768px){
-    .icon-left i{
-        display: inline-block;
-    }
-
-    .img-footer img{
-        width: 100%;
-        height: 80px;
-        margin-top: 8px;
-        padding: 10px 5px;
-        object-fit: cover;
+    .upgrade{
+        width:calc(100% - 210px);
     }
 }
 
-
-
-  
-  
-
-
-
+@media(min-height:90px){
+    footer{
+        min-height: 100px;
+        z-index: 1;}
+    }
