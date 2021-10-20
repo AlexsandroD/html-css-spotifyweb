@@ -12,6 +12,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(29, 29, 29);
+    font-weight: 600;
 }
 
 li{
@@ -24,6 +25,10 @@ a{
 .border-radius{
     border-radius: 50%;
 }
+.brano .div-play-btn:hover .border-radius {
+    border-radius: 0;
+}
+
 /* inizio main */
 main{
     background-color: rgb(29, 29, 29);
@@ -46,7 +51,7 @@ main{
     width: calc(100% - 50px);
     height: 100%;
     background-color: rgb(29, 29, 29);
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .upgrade{
@@ -72,6 +77,11 @@ main{
     border: 1px solid #fafafa;
     border-radius: 30px;
     
+}
+
+.btn:hover a{
+    color:#1FD65F;
+    border:1px solid #1FD65F;
 }
 
 
@@ -109,25 +119,36 @@ main{
 .icone{
     display: flex;
     align-items: center;
+    color:rgb(167, 167, 167);
 }
 
 .icone img{
     width:45px;
     padding: 10px;
     object-fit: contain;
+    opacity:0.5;
+}
+
+.icone:hover img{
+opacity:1;
 }
 
 .text-nav{
+    color:rgb(167, 167, 167);
+}
+
+.icone:hover .text-nav{
     color:#fafafa;
 }
 
 #playlist{
     padding: 10px;
     line-height: 1.8;
+    color: rgb(167, 167, 167);
 }
 
 #playlist i{
-    background-color: gray;
+    background-color: rgb(167, 167, 167);
     margin-right: 5px;
     color: black;
     padding:3px;
@@ -135,12 +156,23 @@ main{
 }
 
 #playlist a{
-    color: white;
+    color:rgb(167, 167, 167);
 }
 
 #playlist, .text-nav{
     display: none;
 }
+
+#playlist:hover{
+    color: #fafafa;
+}
+
+#playlist a:hover{
+    color:#fafafa;
+}
+
+#playlist:hover i{
+    background-color: #fafafa}
 
 .download .icone.app{
    
@@ -169,7 +201,17 @@ main{
    
     border-radius: 50%;;
     background-color:rgb(167, 167, 167) ;
+    opacity:0.5;
 }
+
+.artist:hover img{
+    opacity:1;
+}
+
+.artist:hover .text-nav{
+    color:#fafafa;
+}
+
 /* content  */
 .content{
     margin-top:90px  
@@ -196,11 +238,14 @@ main{
     font-size: 15px;
 }
 
+.nav-content li:hover a{
+    color:#1FD65F;
+}
+
 .container-playlist{
+    width:100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin:10px 10px;
 }
 
 .container-playlist span{
@@ -213,6 +258,7 @@ main{
     height:100%;
     display:flex;
     flex-wrap: wrap;
+   
 
 
     
@@ -222,11 +268,33 @@ main{
 
 .brano{
     text-align: center;
-    width: 200px;
-    height: 200px;
-    margin:10px ;
-    margin-bottom: 150px;
+    width: 200px;   
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 20px;
 }
+
+.div-play-btn{
+    position:relative;
+}
+
+
+.play{
+    display: none;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    padding-top:10px;
+    font-size: 150px;
+    color: white;
+    opacity:0.5
+}
+
+.div-play-btn:hover .play{
+   display: block;}
+
 
 .brano img{
     width:100%
@@ -239,7 +307,7 @@ main{
 
 .content h2{
     color:white;
-    margin:10px;  
+    margin:10px 20px;  
 
 }
 
@@ -260,7 +328,7 @@ footer{
     width: 100%;
     height: 90px;
     z-index: 2;
-    font-size: 0.5em;
+    font-size: 3em;
     background-color: rgb(40, 40, 40)    
 }
 .right-footer{
@@ -276,12 +344,16 @@ footer{
     align-items: center;
     height: 100%;
     width: 25%;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .left-footer i{
     color: rgba(167, 167, 167, 0.527);
     padding: 0px 5px;
+}
+
+.left-footer i:hover{
+    color:#fafafa;
 }
 
 .img-footer img{
@@ -296,6 +368,10 @@ footer{
    
     color:#fafafa;
     margin: 0px 10px;
+}
+.nome-brano .opacity{
+    display: inline-block;
+   font-weight: 300;
 }
 
 .center-footer{
@@ -319,8 +395,12 @@ footer{
 }
 
 .center-top i{
-    font-size:10px;
+    font-size:20px;
     margin:0px 10px;
+}
+
+.center-top i:hover{
+    transform: scale(1.2);
 }
 
 .center-top i:nth-of-type(3){
@@ -351,6 +431,9 @@ footer{
     color:#fafafa;
     font-size: 1em;
     margin:0px 2px;
+}
+.right-footer i:hover{
+    transform: scale(1.2);
 }
 
 
@@ -460,3 +543,5 @@ footer{
         margin: 0px 5px;
     }
 }
+
+
