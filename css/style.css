@@ -21,7 +21,9 @@ li{
 a{
     text-decoration: none;
 }
-
+.border-radius{
+    border-radius: 50%;
+}
 /* inizio main */
 main{
     background-color: rgb(29, 29, 29);
@@ -34,7 +36,6 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     width:50px ;
     height:100%;
     background-color: black;
@@ -142,6 +143,7 @@ main{
 }
 
 .download .icone.app{
+   
     border-bottom: 1px solid rgb(167, 167, 167);
     padding-bottom: 5px;
 }
@@ -187,6 +189,67 @@ main{
     margin: 10px 5px;
 }
 
+.nav-content li a{
+    color: gray;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.container-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:10px 10px;
+}
+
+.container-playlist span{
+    color:rgb(125, 127, 132);
+    margin:10px
+}
+
+.container-brani{
+    width:100% ;
+    height:100%;
+    display:flex;
+    flex-wrap: wrap;
+
+
+    
+    
+    
+}
+
+.brano{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin:10px ;
+    margin-bottom: 150px;
+}
+
+.brano img{
+    width:100%
+}
+
+.brano h3{
+    color:white;
+    padding:10px 0px;
+}
+
+.content h2{
+    color:white;
+    margin:10px;  
+
+}
+
+.brano span{
+    color:rgb(125, 127, 132);
+
+}
+
+
+/* ########inizio footer ####  */
 
 footer{
     display: flex;
@@ -244,9 +307,6 @@ footer{
     flex-direction: column;
     color: white;
     margin-top: 10px;
-    font-size:
-    
-  
 }
 .center-top{
     width: 100%;
@@ -259,12 +319,12 @@ footer{
 }
 
 .center-top i{
-    font-size: 3em;
+    font-size:10px;
     margin:0px 10px;
 }
 
 .center-top i:nth-of-type(3){
-    font-size: 4em;
+    font-size: 20px;
     margin: 0px 5px;
 }
 
@@ -294,10 +354,10 @@ footer{
 }
 
 
+/* progress bar  */
 .progress_bar2{
     width:50%;
 }
-/* progress bar  */
 
 .progress_bar {
     margin: auto;
@@ -371,6 +431,8 @@ footer{
     .upgrade{
         width:calc(100% - 210px);
     }
+
+   
 }
 
 @media(min-height:90px){
@@ -378,3 +440,23 @@ footer{
         min-height: 100px;
         z-index: 1;}
     }
+@media (min-width:958px){
+    .left-footer,.center-footer, .right-footer{
+        font-size: 20px;
+    }
+
+    .right-footer i{
+        font-size: 25px;
+        padding-right: 2px;
+    }
+
+    .center-footer i{
+        font-size: 25px;
+        padding-right: 2px;
+    }
+
+    .center-top i:nth-of-type(3){
+        font-size: 40px;
+        margin: 0px 5px;
+    }
+}
