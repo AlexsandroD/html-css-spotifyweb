@@ -71,16 +71,24 @@ main {
     padding: 8px 30px;
     margin-right: 20px;
     color: #fafafa;
-    font-size: 0.98em;
+    font-size: 0.95em;
     font-weight: 500;
     border: 1px solid #fafafa;
     border-radius: 30px;
 
 }
 
+.btn{
+    transform:scale(.98)
+}
+
 .btn:hover a {
     color: #1FD65F;
     border: 1px solid #1FD65F;
+}
+
+.btn:hover{
+    transform:scale(1)
 }
 
 
@@ -171,7 +179,7 @@ main {
 }
 
 #playlist li {
-    line-height: 2;
+    line-height: 3;
     font-size: 14px;
 }
 
@@ -331,7 +339,7 @@ main {
     font-size: 80px;
     color: white;
     opacity: 0.5;
-    background-color: black;
+    transition:5s;
 
 }
 
