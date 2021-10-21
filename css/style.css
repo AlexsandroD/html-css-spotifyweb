@@ -143,10 +143,17 @@ opacity:1;
 
 #playlist{
     padding: 10px;
-    line-height: 1.8;
     color: rgb(167, 167, 167);
 }
 
+.crea-pl{
+    margin:15px 0px;
+}
+
+#playlist li{
+    line-height: 2;
+    font-size: 14px;
+}
 #playlist i{
     background-color: rgb(167, 167, 167);
     margin-right: 5px;
@@ -272,7 +279,7 @@ opacity:1;
 
 .brano{
     text-align: center;
-    width: 200px;   
+    width: calc(100% / 2 - 60px);   
     margin-top: 20px;
     margin-right: 40px;
     margin-left: 20px;
@@ -337,21 +344,14 @@ footer{
     font-size: 3em;
     background-color: rgb(40, 40, 40)    
 }
-.right-footer{
-    display: flex;
+.right-footer,.left-footer{
+    display: none;
     align-items: center;
     height: 100%;
     width: 25%;
     font-size: 15px;
 }
-.left-footer{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    width: 25%;
-    font-size: 15px;
-}
+
 
 .left-footer i{
     color: rgba(167, 167, 167, 0.527);
@@ -382,7 +382,7 @@ footer{
 
 .center-footer{
     justify-self: center;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -429,7 +429,6 @@ footer{
 }
 .right-footer
 {
-    display: flex;
     justify-content: flex-end;
     margin-right: 10px;
 }
@@ -500,16 +499,6 @@ footer{
 
 
 
-@media(min-width:320px) and (max-width:500px){ 
-    .left-footer,.right-footer{
-        display:none}
-
-    .center-footer{
-        width:100%;
-    }
-
-    .brano img{}
-    }
 
 
 
@@ -532,6 +521,13 @@ footer{
         display: none;
     }
 
+    .nav,.download{
+        padding:0px 10px;
+        padding-right: 20px;
+    }
+
+    
+
     #playlist, .text-nav{
         display:block
     }
@@ -540,7 +536,18 @@ footer{
         width:calc(100% - 210px);
     }
 
-   
+    .right-footer,.left-footer{
+        display: flex;}
+
+    .center-footer{
+            width: 50%;}
+}
+
+
+@media(min-width:720px){
+    .brano{
+        width: calc(100% / 3 - 60px);   
+    }
 }
 
 
@@ -563,6 +570,24 @@ footer{
         font-size: 40px;
         margin: 0px 5px;
     }
+
+    .brano{
+        width: calc(100% / 4 - 60px);   
+    }
 }
 
 
+
+
+
+@media(min-width:1024px){
+    .brano{
+        width: calc(100% / 5 - 60px);   
+    }
+}
+
+@media(min-width:1440px){
+    .brano{
+        width: calc(100% / 6 - 60px);   
+    }
+}
